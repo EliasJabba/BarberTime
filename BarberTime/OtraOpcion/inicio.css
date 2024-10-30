@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+font-family: 'Poppins', sans-serif ;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+
+body{
+        
+    background: url(fondo5.jpg);
+   background-size: 100% 790px;
+   background-repeat: no-repeat;
+   position: relative;
+}
+
+header {
+   margin-top: 20px;
+    margin-bottom: 50px;        
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px ;
+    background-color: transparent;
+    color: white;
+}
+
+/* Estilo del logo o nombre */
+header .logo {
+    margin-left: 5%;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navegacion{
+    margin-left: 15%;
+}
+
+.navegacion a{
+    position: relative;
+    font-size: 1.1ren;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navegacion a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -6px;
+    left: 0;
+    height: 2px;
+    background: white;
+    transform: scale(0);
+    transform-origin: right;
+    transition: transform .4s;
+}
+
+.navegacion a:hover::after{
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.navegacion .btn{
+    width: 140px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1ren;
+    color: white;
+    font-weight: 600;
+    margin-left: 40px;
+    margin-top: -8px;
+}
+
+.boton{
+    background-color: red;
+}
+
+    
+.navegacion .btn:hover{
+    background: white;
+    color: #090f1d;
+}
+
+
+
+
+
+
+.menu-overlay .btn{
+    width: 140px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1ren;
+    color: white;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-top: -8px;
+}
+    
+.menu-overlay .btn:hover{
+    background: white;
+    color: #090f1d;
+}
+.menu-overlay{
+    display: none;
+}
+
+/* Ocultar por defecto el menú hamburguesa y cerrar en pantallas grandes */
+.menu-icon, .menu-close {
+    cursor: pointer;
+    font-size: 24px;
+    display: none;
+}
+
+
+
+/* El contenedor del menú en pantallas grandes */
+nav ul {
+    display: flex;
+    top: 15px;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos de los enlaces del menú */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin-left: 50px;
+}
+
+/* Mostrar el ícono del menú hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Oculta el menú horizontal en pantallas pequeñas */
+    }
+
+    /* Mostrar el icono del menú hamburguesa */
+    .menu-icon {
+        display: block;
+        font-size: 28px;
+        margin-left: 10%;
+    }
+
+    /* El menú flotante cuando el icono hamburguesa es clickeado */
+    .menu-overlay {
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        transition: right 0.7s ease-in-out; /* Transición suave */
+    }
+
+    /* Activar el menú overlay cuando se abre */
+    .menu-overlay.active {
+        right: 0;
+    }
+
+    /* Los enlaces del menú en modo hamburguesa */
+    .menu-overlay ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .menu-overlay ul li {
+        margin: 20px 0;
+    }
+
+    .menu-overlay ul li a {
+        color: white;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    /* El botón de cerrar (X) cuando el menú está abierto */
+    .menu-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 36px;
+        color: white;
+        display: none;
+    }
+
+    /* Mostrar el botón de cerrar cuando el menú esté activo */
+    .menu-overlay.active .menu-close {
+        display: block;
+    }
+
+    /* Ocultar el ícono de hamburguesa cuando el menú está activo */
+    .menu-overlay.active + .menu-icon {
+        display: none;
+    }
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1150px) {
+    nav ul {
+        display: none; /* Oculta el menú horizontal en pantallas pequeñas */
+    }
+
+    /* Mostrar el icono del menú hamburguesa */
+    .menu-icon {
+        display: block;
+        font-size: 28px;
+        margin-left: 10%;
+    }
+
+    /* El menú flotante cuando el icono hamburguesa es clickeado */
+    .menu-overlay {
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        transition: right 0.7s ease-in-out; /* Transición suave */
+    }
+
+    /* Activar el menú overlay cuando se abre */
+    .menu-overlay.active {
+        right: 0;
+    }
+
+    /* Los enlaces del menú en modo hamburguesa */
+    .menu-overlay ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .menu-overlay ul li {
+        margin: 20px 0;
+    }
+
+    .menu-overlay ul li a {
+        color: white;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    /* El botón de cerrar (X) cuando el menú está abierto */
+    .menu-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 36px;
+        color: white;
+        display: none;
+    }
+
+    /* Mostrar el botón de cerrar cuando el menú esté activo */
+    .menu-overlay.active .menu-close {
+        display: block;
+    }
+
+    /* Ocultar el ícono de hamburguesa cuando el menú está activo */
+    .menu-overlay.active + .menu-icon {
+        display: none;
+    }
+}
+
+.fondo{
+    position: relative;
+    margin-top: -40px;    
+    width: 400px;
+    height: 500px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform .5s ease height .2 ease;
+    transform: scale(0);
+    margin-left: 38%;  
+    transition: all 0.5s ease-in-out; 
+    
+}
+
+.fondo.active-btn{
+    transform: scale(1);
+}
+
+.fondo.active{
+    height: 455px;
+}
+
+.fondo .contenedor-form{
+    width: 100%;
+    padding: 40px;
+}
+
+.fondo .contenedor-form.login{
+    transition: .17 ease;
+    transform: translateX(0);
+}
+
+.fondo.active .contenedor-form.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.fondo .contenedor-form.registrar{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+
+.fondo.active .contenedor-form.registrar{
+    transition: transform .17s ease;
+    transform: translateX(0);
+}
+
+.fondo .icono-cerrar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #090f1d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 1.8em;
+    color: #F1EFEF;
+}
+
+
+.contenedor-form h2{
+    font-size: 2em;
+    color: #F1EFEF;
+    text-align: center;
+    top: 50px;
+    
+}
+
+.contenedor-input{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #F1EFEF;
+    margin: 30px 0;
+}
+
+.contenedor-input label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    font-weight: 600;
+    pointer-events: none;
+    transition: .4s;
+    color: #F1EFEF;
+}
+
+
+
+.contenedor-input input:focus~label,
+.contenedor-input input:valid~label{
+    top: -5px;
+}
+
+
+.contenedor-input input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #F1EFEF;
+    padding: 0 35px 0 5px;
+
+}
+
+.contenedor-input .icono{
+    position: absolute;
+    right: 8px;
+    font-size: 1.4e,;
+    color: #F1EFEF;
+    line-height: 57px;
+
+}
+
+.recordar{
+    text-align: center;
+    justify-content: center;
+    font-size: .9em;
+    margin: -15px 0 15px;
+    display: flex;  
+    font-weight: 600;
+    margin-top: 18px;
+
+}
+
+
+.recordar a{
+    color: #F1EFEF;
+    text-decoration: none;
+}
+
+.recordar a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #090f1d;
+    color: #F1EFEF;
+}
+
+
+
+.registrar{
+    font-size: .9em;
+    color: #F1EFEF;
+    text-align: center;
+    margin: 25px 0 10px;
+
+}
+
+.registrar p a {
+
+    color: #F1EFEF;
+    text-decoration: none;
+
+}
+
+.registrar p a:hover {
+    text-decoration: underline;
+}
+
+
+
+* Estilos iniciales para los botones */
+.botones {
+    width: 40%;
+    background-color: transparent;
+    margin-top: -150px;
+    margin-left: 30%;
+
+
+}
+
+.botones .btnm, .botones .btnl {
+    margin-left: 30px;
+    width: 40%;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    color: yellow;
+}
+
+.botones .btnm {
+    background-color: red;
+}
+
+.botones .btnl {
+    background-color: blue;
+}
+
+.botones .btnm:hover, .botones .btnl:hover {
+    background-color: #6a11cb;
+}
+
+.botones .btnl a {
+    text-decoration: none;
+    color: yellow;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .botones {
+        width: 100%;
+        margin-left: -10px;
+        text-align: center;
+        margin-top: -130px; /* Ajusta si es necesario */
+    }
+
+    .botones .btnm, .botones .btnl {
+        width: 50%; /* Botones más grandes en pantallas pequeñas */
+        font-size: 0.9em;
+        height: 50px; /* Ajuste de altura en pantallas pequeñas */
+        margin-bottom: 10px; /* Espacio entre botones */
+    }
+}
+
+/* Ajuste para pantallas medianas */
+@media screen and (min-width: 768px) and (max-width: 1150px) {
+    .botones {
+        width: 50%;
+        margin-left: 35%;
+        margin-top: -120px; /* Ajuste de posición si es necesario */
+    }
+
+    .botones .btnm, .botones .btnl {
+        width: 50%;
+        margin-top: 10px;
+        font-size: 1em;
+        height: 45px;
+    }
+}
+
+/* Ajuste para pantallas grandes */
+@media screen and (min-width: 1024px) {
+    .botones {
+        width: 46%;
+        margin-left: 28%;
+        margin-top: -130px;
+    }
+
+    .botones .btnm, .botones .btnl {
+        width: 42%;
+        font-size: 1.1em;
+        height: 50px;
+    }
+}
+
+/*LOGIN Y REGISTRAR*/
+
+/* Ajuste para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+
+    .fondo{
+    margin-top: -20px;    
+    width: 300px;
+    height: 500px;
+    margin-left: 22%;
+    }
+    
+}
+
+/* Ajuste para pantallas medianas */
+@media screen and (min-width: 768px) and (max-width: 1150px) {
+    .fondo{
+    margin-top: -20px;    
+    width: 300px;
+    height: 500px;
+    margin-left: 34%;
+    }
+}
+
+/* Ajuste para pantallas grandes */
+@media screen and (min-width: 1024px) {
+   .fondo{
+    margin-top: -20px;    
+    width: 400px;
+    height: 500px;
+    margin-left: 38%;
+    }
+}
+
+

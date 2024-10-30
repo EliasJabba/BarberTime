@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECONOCIMIENTO FACIAL | BARBERTIME</title>
+
+    <script src="public/js/face-api.min.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        video {
+            position: absolute;
+            z-index: 1;
+        }
+
+        canvas {
+            position: relative;
+            z-index: 20;
+        }
+
+        #resultado {
+            position: absolute;
+            top: 1000px;
+            left: 10px;
+            color: red;
+            font-size: 24px;
+            z-index: 30;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div style="position: relative">
+        <video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline></video>
+        <canvas id="overlay"></canvas>
+        
+    </div>
+
+    <div id="resultado" style="position: absolute; z-index: 30; color: white; font-size: 24px; top: 10px; left: 10px;">
+        Tu tipo de rostro es: <span id="tipoRostro">Desconocido</span>
+    </div>
+
+    <script src="./public/js/script_webcam.js"></script>
+</body>
+</html>

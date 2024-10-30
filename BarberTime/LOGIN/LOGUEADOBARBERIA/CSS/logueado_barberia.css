@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+font-family: 'Poppins', sans-serif ;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+
+body{
+        
+    
+   position: relative;
+}
+
+header {
+  
+    margin-bottom: 50px;        
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px ;
+    background-color: transparent;
+    color: white;
+    background-color: blue;
+}
+
+/* Estilo del logo o nombre */
+header .logo {
+    margin-left: 5%;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navegacion{
+    margin-left: 15%;
+}
+
+.navegacion a{
+    position: relative;
+    font-size: 1.1ren;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navegacion a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -6px;
+    left: 0;
+    height: 2px;
+    background: white;
+    transform: scale(0);
+    transform-origin: right;
+    transition: transform .4s;
+}
+
+.navegacion a:hover::after{
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.navegacion .btn{
+    width: 140px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1ren;
+    color: white;
+    font-weight: 600;
+    margin-left: 40px;
+    margin-top: -8px;
+}
+
+.boton{
+    background-color: red;
+}
+
+    
+.navegacion .btn:hover{
+    background: white;
+    color: #090f1d;
+}
+
+
+
+
+
+
+.menu-overlay .btn{
+    width: 140px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1ren;
+    color: white;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-top: -8px;
+}
+    
+.menu-overlay .btn:hover{
+    background: white;
+    color: #090f1d;
+}
+.menu-overlay{
+    display: none;
+}
+
+/* Ocultar por defecto el menú hamburguesa y cerrar en pantallas grandes */
+.menu-icon, .menu-close {
+    cursor: pointer;
+    font-size: 24px;
+    display: none;
+}
+
+
+
+/* El contenedor del menú en pantallas grandes */
+nav ul {
+    display: flex;
+    top: 15px;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos de los enlaces del menú */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin-left: 50px;
+}
+
+/* Mostrar el ícono del menú hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Oculta el menú horizontal en pantallas pequeñas */
+    }
+
+    /* Mostrar el icono del menú hamburguesa */
+    .menu-icon {
+        display: block;
+        font-size: 28px;
+        margin-left: 10%;
+    }
+
+    /* El menú flotante cuando el icono hamburguesa es clickeado */
+    .menu-overlay {
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        transition: right 0.7s ease-in-out; /* Transición suave */
+    }
+
+    /* Activar el menú overlay cuando se abre */
+    .menu-overlay.active {
+        right: 0;
+    }
+
+    /* Los enlaces del menú en modo hamburguesa */
+    .menu-overlay ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .menu-overlay ul li {
+        margin: 20px 0;
+    }
+
+    .menu-overlay ul li a {
+        color: white;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    /* El botón de cerrar (X) cuando el menú está abierto */
+    .menu-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 36px;
+        color: white;
+        display: none;
+    }
+
+    /* Mostrar el botón de cerrar cuando el menú esté activo */
+    .menu-overlay.active .menu-close {
+        display: block;
+    }
+
+    /* Ocultar el ícono de hamburguesa cuando el menú está activo */
+    .menu-overlay.active + .menu-icon {
+        display: none;
+    }
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1150px) {
+    nav ul {
+        display: none; /* Oculta el menú horizontal en pantallas pequeñas */
+    }
+
+    /* Mostrar el icono del menú hamburguesa */
+    .menu-icon {
+        display: block;
+        font-size: 28px;
+        margin-left: 10%;
+    }
+
+    /* El menú flotante cuando el icono hamburguesa es clickeado */
+    .menu-overlay {
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        transition: right 0.7s ease-in-out; /* Transición suave */
+    }
+
+    /* Activar el menú overlay cuando se abre */
+    .menu-overlay.active {
+        right: 0;
+    }
+
+    /* Los enlaces del menú en modo hamburguesa */
+    .menu-overlay ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .menu-overlay ul li {
+        margin: 20px 0;
+    }
+
+    .menu-overlay ul li a {
+        color: white;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    /* El botón de cerrar (X) cuando el menú está abierto */
+    .menu-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 36px;
+        color: white;
+        display: none;
+    }
+
+    /* Mostrar el botón de cerrar cuando el menú esté activo */
+    .menu-overlay.active .menu-close {
+        display: block;
+    }
+
+    /* Ocultar el ícono de hamburguesa cuando el menú está activo */
+    .menu-overlay.active + .menu-icon {
+        display: none;
+    }
+}

@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+font-family: 'Poppins', sans-serif ;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+body{
+
+
+  
+
+   background-color: white;
+}
+
+header {
+  
+    margin-bottom: 50px;        
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px ;
+    background-color: blue;
+    color: white;
+}
+
+/* Estilo del logo o nombre */
+header .logo {
+    margin-left: 5%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navegacion{
+    margin-left: 15%;
+    
+}
+
+.navegacion a{
+    position: relative;
+    font-size: 1.1ren;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navegacion a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -6px;
+    left: 0;
+    height: 2px;
+    background: white;
+    transform: scale(0);
+    transform-origin: right;
+    transition: transform .4s;
+}
+
+.navegacion a:hover::after{
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.navegacion .btn{
+    width: 140px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1ren;
+    color: white;
+    font-weight: 600;
+    margin-left: 40px;
+    margin-top: -8px;
+}
+
+.boton{
+    background-color: red;
+}
+
+    
+.navegacion .btn:hover{
+    background: white;
+    color: #090f1d;
+}
+
+
+
+
+
+
+.menu-overlay .btn{
+    width: 140px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1ren;
+    color: white;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-top: -8px;
+}
+    
+.menu-overlay .btn:hover{
+    background: white;
+    color: #090f1d;
+}
+.menu-overlay{
+    display: none;
+}
+
+/* Ocultar por defecto el menú hamburguesa y cerrar en pantallas grandes */
+.menu-icon, .menu-close {
+    cursor: pointer;
+    font-size: 24px;
+    display: none;
+}
+
+
+
+/* El contenedor del menú en pantallas grandes */
+nav ul {
+    display: flex;
+    top: 15px;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos de los enlaces del menú */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin-left: 50px;
+}
+
+/* Mostrar el ícono del menú hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Oculta el menú horizontal en pantallas pequeñas */
+    }
+
+    /* Mostrar el icono del menú hamburguesa */
+    .menu-icon {
+        display: block;
+        font-size: 28px;
+        margin-left: 10%;
+    }
+
+    /* El menú flotante cuando el icono hamburguesa es clickeado */
+    .menu-overlay {
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        transition: right 0.7s ease-in-out; /* Transición suave */
+    }
+
+    /* Activar el menú overlay cuando se abre */
+    .menu-overlay.active {
+        right: 0;
+    }
+
+    /* Los enlaces del menú en modo hamburguesa */
+    .menu-overlay ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .menu-overlay ul li {
+        margin: 20px 0;
+    }
+
+    .menu-overlay ul li a {
+        color: white;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    /* El botón de cerrar (X) cuando el menú está abierto */
+    .menu-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 36px;
+        color: white;
+        display: none;
+    }
+
+    /* Mostrar el botón de cerrar cuando el menú esté activo */
+    .menu-overlay.active .menu-close {
+        display: block;
+    }
+
+    /* Ocultar el ícono de hamburguesa cuando el menú está activo */
+    .menu-overlay.active + .menu-icon {
+        display: none;
+    }
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1150px) {
+    nav ul {
+        display: none; /* Oculta el menú horizontal en pantallas pequeñas */
+    }
+
+    /* Mostrar el icono del menú hamburguesa */
+    .menu-icon {
+        display: block;
+        font-size: 28px;
+        margin-left: 10%;
+    }
+
+    /* El menú flotante cuando el icono hamburguesa es clickeado */
+    .menu-overlay {
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        transition: right 0.7s ease-in-out; /* Transición suave */
+    }
+
+    /* Activar el menú overlay cuando se abre */
+    .menu-overlay.active {
+        right: 0;
+    }
+
+    /* Los enlaces del menú en modo hamburguesa */
+    .menu-overlay ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .menu-overlay ul li {
+        margin: 20px 0;
+    }
+
+    .menu-overlay ul li a {
+        color: white;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    /* El botón de cerrar (X) cuando el menú está abierto */
+    .menu-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 36px;
+        color: white;
+        display: none;
+    }
+
+    /* Mostrar el botón de cerrar cuando el menú esté activo */
+    .menu-overlay.active .menu-close {
+        display: block;
+    }
+
+    /* Ocultar el ícono de hamburguesa cuando el menú está activo */
+    .menu-overlay.active + .menu-icon {
+        display: none;
+    }
+}
+
+.barberia{
+    margin-top: 100px    ;
+    margin-left: 3.7%;
+    width: 20%;
+    height: 320px;
+    display: inline-block;
+    cursor: pointer;
+    color: black;    
+    border-radius: 12px;
+     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+.barberia img{  
+
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;    
+    width: 100%;
+    height: 190px;
+}
+
+.barberia p{
+
+font-size: 13px;
+    
+}
+
+
+.barberia a{    
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: yellow;
+    margin-top: 3px;
+    
+
+}
+
+.barberia h2{
+
+margin-top: 3px;
+}
+
+.reserva{
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 30%;
+    width: 39%;
+    height: 25px;
+    border-radius: 5px;
+    background-color: blue;
+    border: none;
+
+    }
+
+
+.buscador{
+    width: 40%;
+    border-radius: 10px;
+    margin-left: 30%;
+    border: 1px solid skyblue;
+}
+
+.buscador input{
+    width: 31%;
+    height: 50px;
+    margin-left: 22%;
+   border-radius: 10px;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   outline: white;
+
+
+   border: white;
+}
+
+.buscador i{
+    margin-left: 4%;
+}
+
+.botonn{
+    margin-left: 23%;
+    border-radius: 20px;
+    width: 15%;
+    background-color: transparent;
+    height: 40px;
+    color: white;
+    border: none;
+    background-color: black;
+    cursor: pointer;
+}
+
+.botonn:hover{
+    background-color: blue;
+}
+
+
+
+/* Ajuste para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+
+   .buscador{
+    width: 90%; 
+    margin-left: 5%;   
+   }
+
+   .buscador input{
+    width: 45%;
+    margin-left: 14%;
+   }
+
+   .botonn{
+    margin-left: 15%;
+   }
+   
+
+   .barberia{
+    width: 40%;
+    margin-left: 6%;
+   }
+
+
+
+
+   .barberia h2{
+    font-size: 20px;
+   }
+    
+}
+
+/* Ajuste para pantallas medianas */
+@media screen and (min-width: 768px) and (max-width: 1150px) {
+
+     .buscador{
+    width: 90%; 
+    margin-left: 5%;   
+   }
+
+   .buscador input{
+    width: 45%;
+    margin-left: 14%;
+   }
+
+   .botonn{
+    margin-left: 20%;
+    width: 12%;
+   }
+   
+
+   .barberia{
+    width: 25%;
+    margin-left: 6%;
+   }
+
+
+
+
+   .barberia h2{
+    font-size: 20px;
+   }
+    
+}
+
+
+
+
+
+
+

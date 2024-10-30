@@ -1,0 +1,78 @@
+
+
+
+.formulario{
+	background-color: blue;
+	margin-top: -30px;
+	width: 60%;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid beige;
+	height: 580px;
+	border-radius: 20px;
+	margin-left: 20%;
+}
+
+.formulario h2{
+	margin-top: 30px;
+	color: white;
+
+	justify-content: center;
+	text-align: center;
+}
+
+.formulario .ingresar{
+	margin-top: 40px;
+	width: 40%;
+	height: 45px;
+	border-radius: 20px;
+	justify-content: center;
+	text-align: center;
+	margin-left: 60px;
+	color: black;
+	font-weight: bold;
+	font-size: 16px;
+}
+.formulario .ingresars{
+	margin-top: 50px;
+	width: 86.5%;
+	height: 45px;
+	border-radius: 20px;
+	justify-content: center;
+	text-align: center;
+	font-weight: bold;
+	margin-left: 60px;
+}
+
+
+
+
+.formulario textarea{
+	margin-left: 60px;
+	margin-top: 50px;
+	width: 86.5%;
+	justify-content: center;
+	text-align: center;
+	height: 100px;
+	border-radius: 10px;
+	font-weight: bold;
+	align-items: center;
+
+}
+
+.formulario button{
+	margin-top: 50px;
+	width: 100px;
+	border-radius: 10px;
+	height: 3	0px;
+	margin-left: 43%;
+	font-weight: bold;
+}
+
+
+.formulario .texto{
+	display: inline-block;
+	margin-left: 30%;
+	color: white;
+
+}

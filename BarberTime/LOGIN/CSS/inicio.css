@@ -1,0 +1,17 @@
+body {
+    font-family: 'Poppins', sans-serif;
+   background-image: url(../../OtraOpcion/fondo5.jpg);   
+   background-repeat: no-repeat;
+   background-size: 100% 180% ;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
